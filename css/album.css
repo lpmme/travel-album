@@ -1,0 +1,350 @@
+#app, html, body {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  position: relative;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  font-family: ubuntu, helvetica, arial;
+  overflow: hidden;
+}
+[v-cloak] {
+  display: none;
+}
+.hide {
+  visibility: hidden;
+}
+#wrapper {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+p {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 200%;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.page {
+  background-image: url('../img/bg.png');
+  background-size: 100% 100%;
+  position: relative;
+}
+.page .item {
+  display: none;
+}
+/*模板样式*/
+.page0 .logo {
+  position: absolute;
+  top: 5%;
+  left: 6%;
+  width: 33%;
+}
+.page5 .logo {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%);
+}
+.logo img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.title {
+  position: absolute;
+  top: 16%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  font-size: 25px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+.time {
+  top: 34%;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  position: absolute;
+  font-size: 15px;
+  padding: 0 20px;
+  color: #555;
+}
+.desc {
+  background-color: #edf0f3;
+}
+.page0 .item0 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+}
+.page1 .desc div, .page2 .desc div, .page3 .desc div, .page5 .desc div, .page7 .desc div {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.page1 .desc {
+  position: absolute;
+  bottom: 10%;
+  left: 4%;
+  width: 92%;
+  height: 21%;
+  padding: 20px;
+  font-size: 15px;
+}
+.page2 .desc {
+  position: absolute;
+  top: 8%;
+  left: 4%;
+  width: 92%;
+  height: 19%;
+  padding: 20px;
+  font-size: 15px;
+}
+.page3 .desc {
+  position: absolute;
+  bottom: 9%;
+  left: 4%;
+  width: 92%;
+  height: 19%;
+  padding: 20px;
+  font-size: 15px;
+}
+.page5 .desc {
+  position: absolute;
+  top: 66%;
+  left: 4%;
+  width: 92%;
+  height: 19%;
+  padding: 20px;
+  font-size: 15px;
+}
+.page7 .desc {
+  position: absolute;
+  top: 8%;
+  left: 4%;
+  width: 92%;
+  height: 19%;
+  padding: 20px;
+  font-size: 15px;
+}
+.page1 .item0 {
+  position: absolute;
+  top: 13%;
+  left: 4%;
+  width: 44%;
+  height: 52%;
+}
+.page1 .item1 {
+  position: absolute;
+  top: 8%;
+  right: 4%;
+  width: 44%;
+  height: 52%;
+}
+.page2 .item0 {
+  position: absolute;
+  top: 30%;
+  left: 4%;
+  width: 92%;
+  height: 29%;
+}
+.page2 .item1 {
+  position: absolute;
+  top: 62%;
+  left: 4%;
+  width: 92%;
+  height: 29%;
+}
+.page3 .item0 {
+  position: absolute;
+  top: 9%;
+  left: 4%;
+  width: 92%;
+  height: 29%;
+}
+.page3 .item1 {
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  width: 44%;
+  height: 29%;
+}
+.page3 .item2 {
+  position: absolute;
+  top: 40%;
+  left: 52%;
+  width: 44%;
+  height: 29%;
+}
+.page4 .item0 {
+  position: absolute;
+  top: 6%;
+  left: 4%;
+  width: 92%;
+  height: 27%;
+}
+.page4 .item1 {
+  position: absolute;
+  top: 36%;
+  left: 4%;
+  width: 92%;
+  height: 27%;
+}
+.page4 .item2 {
+  position: absolute;
+  top: 66%;
+  left: 4%;
+  width: 92%;
+  height: 27%;
+}
+.page5 .item0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62%;
+}
+.page6 .item0 {
+  position: absolute;
+  top: 6%;
+  left: 5.5%;
+  width: 89%;
+  height: 85.3%;
+}
+.page7 .item0 {
+  position: absolute;
+  top: 30%;
+  left: 4%;
+  width: 92%;
+  height: 61%;
+}
+.current .item {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+.current .item {
+  display: block;
+}
+
+/*滚动条样式*/
+.slide-progress {
+  position: absolute;
+  z-index: 0;
+  width: 8px;
+  top: 50%;
+  right: 5px;
+  overflow: hidden;
+}
+.current-dot {
+  position: absolute;
+  z-index: 1;
+}
+.progress-dot.current-dot::before {
+  background: #999;
+}
+.progress-dot {
+  width: 100%;
+  padding: 2px 0;
+}
+.progress-dot::before {
+  content: ' ';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666;
+}
+
+/*数据加载*/
+.start-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  animation:flying 4s infinite;
+}
+@-webkit-keyframes flying {
+  0% {
+    left: 100%;
+    opacity: 1; }
+
+  25% {
+    left: 60%;
+    opacity: 0.7; }
+
+  50% {
+    left: 30%;
+    opacity: 0.5; 
+    } 
+  100% {
+    left: 0%;
+    opacity: 0.3; 
+    }
+  }
+#progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*音乐区域样式*/
+.music {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  z-index: 0;
+}
+audio:not([controls]) {
+  display: none;
+}
+.music .control {
+  width: 36px;
+  height: 36px;
+  background: url('../img/music.gif') transparent no-repeat center center;
+  background-size: contain;
+}
+.music .control .control-after {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  background: url('../img/static.png') transparent no-repeat center center;
+  background-size: 100% 100%;
+  -webkit-animation: rotate2d 1.2s linear infinite;
+  animation: rotate2d 1.2s linear infinite;
+  z-index: -1;
+}
+.music.stopped .control {
+  background: 0 0;
+}
